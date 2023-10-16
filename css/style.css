@@ -1,4 +1,10 @@
 body {
-	background-color:#1E90FF;
 	overflow: hidden;
+
 }
+
+#canvas {
+	background-color: blue;
+
+}
+
