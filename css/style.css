@@ -1,10 +1,10 @@
 body {
-	overflow: hidden;
+	overflow: hidden; /*Comando para esconder a barra de Scroll*/
 
 }
 
 #canvas {
-	background-color: blue;
+	background-color: blue; /*Comando para pintar a tela do Canvas de Azul escuro*/
 
 }
 
