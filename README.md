@@ -21,7 +21,7 @@ Autores:Kauan Jesus e Ruan Pablo
 ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/39314702-ef4b-46a9-93ad-10f437ea4a9f)<br
 ## Cenário inicial
 ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/278bb76a-9236-485d-84fd-da2e71f0190d)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqui temos um cenário bem simples, vale lembrar que este projeto serve mais para mostrar as funçoes do Canvas, então não há necessidade de fazer algo muito complexo. Utilizamos os desenhos simples do Canvas:Retângulos;Arcos e Linhas. Utilizando os seus respectivos comandos:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqui temos um cenário bem simples, vale lembrar que este projeto serve mais para mostrar as funçoes do Canvas, então não há necessidade de fazer algo muito complexo. Utilizamos os desenhos simples do Canvas:Retângulos;Arcos e Linhas e pintamos o fundo de azul escuro com comandos no css. Utilizando os seus respectivos comandos:
 
      //Circulo
     ctx.beginPath();//Inicia o caminho do desenho
@@ -43,7 +43,20 @@ Autores:Kauan Jesus e Ruan Pablo
 		ctx.lineTo(110,100);
 		ctx.lineTo(130,80);
 		ctx.lineTo(130,100);
-		ctx.stroke();Assim como nos comandos acima, voçê deve botar no inicio "FillStroke= ´cor´" para definir a cor da linha, Como eu não defini nenhuma, a linha esta preta
+		ctx.stroke();Assim como nos comandos acima, voçê deve botar no inicio "FillStroke= ´cor´" para definir a cor da linha, Como eu não defini nenhuma, a linha 		esta preta
+
+  	//Css
+   	body {
+	overflow: hidden; /*Comando para esconder a barra de Scroll*/
+
+	}
+
+	#canvas {
+	background-color: blue; /*Comando para pintar a tela do Canvas de Azul escuro*/
+
+	}
+
+
 
  > ⚠️ **Aviso:** O codígo acima foi retirado do codígo principal, então cuidado ao copiar.
 
