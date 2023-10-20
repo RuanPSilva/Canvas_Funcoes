@@ -8,13 +8,15 @@ ctx.canvas.height=600;
 var yBarco = 1;
 var velocidadeBarco = 10;
 
+
 function barco(){ //Criando uma function para o barco
 	//Inicio do Barco
+	ctx.rotate(Math.PI*2)
 	ctx.translate(0,yBarco) // Código de tranlação responsável por mover todos os atributos que formam o barco (apenas no eixo y pois o barco só vai para cima e para baixo)
 	ctx.beginPath();
-	ctx.fillStyle = '#8B4513';
-	ctx.fillRect(1250, 310, 80, 20);//Parte de cima do Barco
-	ctx.fillRect(1265, 320, 50, 20);//Parte de Baixo do Barco
+	ctx.fillStyle = '#8B4513';//Cor do retângulo
+	ctx.fillRect(1250, 310, 80, 20);//Parte de cima do Barco e o comando para criar o retangulo
+	ctx.fillRect(1265, 320, 50, 20);//Parte de Baixo do Barco e o comando para criar o retângulo
 
 	ctx.fillStyle = "#DEB887";
 	ctx.fillRect(1290, 281, 5,30);//Pilar do Mastro
@@ -29,13 +31,14 @@ function barco(){ //Criando uma function para o barco
 
 //Inimigo 1
 var x = 1; //variavel referente a posição x do inimigo 1
-var velocidade = 6; //variavel referente a velocidade do inimigo 1
+var velocidade = 8; //variavel referente a velocidade do inimigo 1
 
 	function inimigo1(){ //Criando uma function para o inimigo 1
+		ctx.rotate(Math.PI/6);
 		ctx.translate(x,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 1 (apenas no eixo x pois os monstros só vão para o lado)
-		ctx.beginPath();
-		ctx.arc(100,70,60,0,Math.PI*2)
-		ctx.fillStyle = "#7B68EE";
+		ctx.beginPath();//Inicia o caminho do desenho
+		ctx.arc(100,70,60,0,Math.PI*2)//Define onde vai surgir o arco, seu tamanho, e a circuferencia do arco
+		ctx.fillStyle = "#7B68EE";//Cor do Arco
 		ctx.fill();//Corpo
 		
 		ctx.beginPath();
@@ -66,6 +69,7 @@ var velocidade2 = 5; //variavel referente a velocidade do inimigo 2
 
 	function inimigo2(){ //Criando uma function para o inimigo 2
 		ctx.translate(x2,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 2
+		ctx.scale(1.0,0.3);
 		ctx.beginPath();
 		ctx.arc(100,280,60,0,Math.PI*2)
 		ctx.fillStyle = "#7B68EE";
@@ -124,6 +128,7 @@ var velocidade3 = 4; //variavel referente a velocidade do inimigo 3
 		ctx.lineTo(130,500);
 		ctx.lineTo(130,520);
 		ctx.stroke();//Boca
+		ctx.transform(4, 0, 0, 4, 0, 0);
 		ctx.setTransform(1,0,0,1,0,0); // Esse código serve para que o código de translação colocado no começo, não afete outros objetos, apenas o inimigo 3
 	}
 
@@ -146,6 +151,8 @@ var velocidade3 = 4; //variavel referente a velocidade do inimigo 3
 		}
 		if(x > 1420){ // Se a posição x do inimigo 1 ultrapassar o tamanho máximo da largura do canvas (1400), ele retornará para o começo da tela do canvas
 			x = -100;
+			
+
 		}
 
 		requestAnimationFrame(animar); // É o comando que faz a animação acontecer, sem ele os códigos acima não servirão de nada.
