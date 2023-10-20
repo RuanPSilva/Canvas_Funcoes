@@ -230,6 +230,76 @@ Autores:Kauan Jesus e Ruan Pablo
 		}
 	});
 
-	animar(); // Chamando a função animar para que ela aconteça
+	animar(); // Chamando a função animar para que ela aconteça <br>
+
+ ## Translação 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O metódo "translate()" e usado para mover o canvas e sua Grid para um ponto diferente do grid.
+  - Sintaxe:translate(x,y). X indica a distancia horizontal a ser movida e Y a distancia vertical.<br>
+  ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/fad73106-1760-4ace-86bc-eb5663ed6940)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A imagem acima representa de forma grafica como esse comando funciona, e como ele mexe o canvas pelo Grid. É o codígo abaixo mostra o metódo "translate()" sendo usado no nosso codígo. Ele basicamente e responsavel por mover todos os personagens da cena em seus respectivos eixos.
+
+		function inimigo1(){ //Criando uma function para o inimigo 1
+		ctx.translate(x,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 1 (apenas no eixo x pois os monstros só vão para o 		lado)
+
+		function inimigo2(){ //Criando uma function para o inimigo 2
+		ctx.translate(x2,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 2
+
+   		function inimigo3(){ //Criando uma function para o inimigo 3
+		ctx.translate(x3,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 3
+
+		function barco()
+  		ctx.translate(0,yBarco) // Código de tranlação responsável por mover todos os atributos que formam o barco (apenas no eixo y pois o barco só vai para cima e 		para baixo)
+
+## Rotação
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O método "Rotate()" e utilizado para rotacionar o canvas em torno da propria origem.<br>
+- Sintaxe: rotate(angulo). Este metodo rotaciona no sentido horario, com base em radianos. O ponto central da rotação e sempre o ponto de origem do canvas.<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/0ea046aa-298f-4d49-af32-7108f2a4d0a6)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A imagem acima mostra como funciona de forma grafíca, e o codígo abaixo mostra como funciona dentro do nosso codígo. Basicamente, ele esta fazendo o inimigo 1 do jogo (A primeira bolinha roxa de cima pra baixo) ir em linha reta para baixo, se nao fosse pelo metodo "Rotate()" o inimigo 1 estaria indo reto para a direita.
+
+		function inimigo1(){ //Criando uma function para o inimigo 1
+		ctx.rotate(Math.PI/6); //Fazendo o inimigo ir em linha reta para baixo, mudando a rotação dele em rad.
+		ctx.translate(x,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 1 (apenas no eixo x pois os monstros só vão para o 		lado)
+		ctx.beginPath();//Inicia o caminho do desenho
+		ctx.arc(100,70,60,0,Math.PI*2)//Define onde vai surgir o arco, seu tamanho, e a circuferencia do arco
+		ctx.fillStyle = "#7B68EE";//Cor do Arco
+		ctx.fill();//Corpo
+  		/.../
+### Resultado
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/7a4cfe50-050b-4846-9603-5a98fc2efdfb)
+
+
+> 🗒️ *Nota:* Reduzimos o tamanho da função inteira para economizarmos linha neste readme, ja que ja mostramos essa função varias vezes. Os codígos repetidos a partir daqui sera limitados pelo "/.../" caso eles ja tenham aparecido, mostrando somente a parte onde o metódo principal esta sendo utilizado.<br>
+## Escala ou Escalonamento
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O metódo de Escalonamento as unidades do grid, ou seja, ele serve para diminuir ou aumentar os objetos do Canvas.<br>
+- Sintaxe: scale(x,y). "x" Escala as unidades do objeto horizontalmente e "y" verticalmente e ambos parametros são números reais. Numeros positivos aumentam o tamanho enquanto os negativos reduzem o tamanho e o valor 1.0 mantém o mesmo tamanho. Ao usar numéros negativos você também pode fazer espelhamento. Cada unidade do canvas e 1 pixel, então se usarmos um valor como "0.5" ele ira reduzir o tamanho pela metade, se usarmos (2.0) ele ira dobrar o tamanho, e assim por diante.<br>
+
+		function inimigo2(){ //Criando uma function para o inimigo 2
+		ctx.translate(x2,0); // Código de tranlação responsável por mover todos os atributos que formam o inimigo 2
+		ctx.scale(1.0,0.3); //Utilizando o Scale para fazer o inimigo 2 ficar esticado.
+		ctx.beginPath();
+		ctx.arc(100,280,60,0,Math.PI*2)
+		ctx.fillStyle = "#7B68EE";
+		ctx.fill();//Corpo
+  		/.../
+### Resultado
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/6619b5bf-e37d-402b-91d9-452d274d6454)
+## Transformação
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esse metódo e um pouco mais complicado, ele permite modificacoes direta nas matriz de transformações<br>
+- Sintaxe:transform (m11,m12,m21,m22,dx,dy). Esse metódo multiplica  a matriz de transformação pela matriz descrita por:<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/fd8715f3-16f9-4d0b-bd6a-f0557101cc7b)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se você tiver estudado matrizes na escola, fica bem mais facil de entender essa imagem. Vale lembrar que o "x" e o "y" na segunda matriz e o "dx" e o "dy" na sintaxe acima. Com esse método você consegue fazer todas as outras coisas que os outros métodos fazem, além de conseguir mover e distorcer os objetos também. Porém, esse metódo também tem outra sintaxe acompanhada com ele, que é o:
+- Sintaxe: setTransform(m11, m12, m21, m22, dx, dy). Este método reseta a matriz atual para a matriz indentidade, e então chama o método "Transform()" com os mesmos argumentos, desfazendo a transformação atual e configurando a nova transformação especifíca, tudo em 1 so comando. Neste codígo estamos utilizando este método para deixar os métodos "translate()" afetando somente seu respectivo personagem, como no codígo abaixo:
+
+ 		 ctx.setTransform(1,0,0,1,0,0); // Esse código serve para que o código de translação colocado no começo, não afete outros objetos, apenas o inimigo 3
+  ### Resultado
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O resultado aqui seria o mesmo que no da translação, ja que ambos estão trabalhando para fazerem a mesma coisa.
+## Clipping Path ( Caminhos de Recorte)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este método recorta partes que você acha indesejavel no Canvas, na forma que você quiser.
+
+
+
+
+    
+  
 
  
