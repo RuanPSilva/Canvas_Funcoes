@@ -294,7 +294,24 @@ nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esse metódo e um pouco ma
   ### Resultado
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O resultado aqui seria o mesmo que no da translação, ja que ambos estão trabalhando para fazerem a mesma coisa.
 ## Clipping Path ( Caminhos de Recorte)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este método recorta partes que você acha indesejavel no Canvas, na forma que você quiser.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este método recorta partes que você acha indesejavel no Canvas, na forma que você quiser, como se fosse a ferramenta de tesoura nos editores de imagens. A imagem abaixo mostra isso, o formato da estrela e o lugar onde esta cortado e tudo que estiver do lado de fora não ira aparecer no Canvas.<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/9b420a76-91da-45e9-afc2-3b0992328fe0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No codígo abaixo, eu utilizei a função de Recorte para "Esconder" os inimigos no meio do caminho, utilizando um circulo como forma de recorte.
+
+	function desenharCorte() {
+	ctx.beginPath();
+	ctx.fillStyle="black";
+	ctx.arc(230,280,310,0,Math.PI*2)
+	ctx.clip();
+ ### Resultado
+ ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/15e56bb7-a52b-4b85-b7a7-c6b291a6ec42)
+
+ ## Referências
+ https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing<br>
+ https://klebermota.eti.br/2013/10/27/tutorial-de-canvas-parte-5-transformacoes/
+
+
+
 
 
 
