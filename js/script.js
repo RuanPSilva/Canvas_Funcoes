@@ -4,6 +4,17 @@ const ctx = canvas.getContext('2d');//Linkando o canvas com o HTML
 ctx.canvas.width=1400;
 ctx.canvas.height=600;
 
+
+
+function desenharCorte() {
+	ctx.beginPath();
+	ctx.fillStyle="black";
+	ctx.arc(230,280,310,0,Math.PI*2)
+	ctx.clip();
+	
+	
+}
+
 //Barco
 var yBarco = 1;
 var velocidadeBarco = 10;
@@ -128,7 +139,6 @@ var velocidade3 = 4; //variavel referente a velocidade do inimigo 3
 		ctx.lineTo(130,500);
 		ctx.lineTo(130,520);
 		ctx.stroke();//Boca
-		ctx.transform(4, 0, 0, 4, 0, 0);
 		ctx.setTransform(1,0,0,1,0,0); // Esse código serve para que o código de translação colocado no começo, não afete outros objetos, apenas o inimigo 3
 	}
 
@@ -138,6 +148,7 @@ var velocidade3 = 4; //variavel referente a velocidade do inimigo 3
 		inimigo2(); //Chamando a função do inimigo 2 para que ele apareça na tela do canvas e não seja apagado pelo clearRect
 		inimigo1(); //Chamando a função do inimigo 1 para que ele apareça na tela do canvas e não seja apagado pelo clearRect
 		barco(); //Chamando a função do barco para que ele apareça na tela do canvas e não seja apagado pelo clearRect
+		desenharCorte(); // Mesmo motivo dos codígo acima
 
 		x3 += velocidade3; //Código reponsavél por fazer o inimigo 3 andar, pegando a sua posição x e somando com o valor da velocidade
 		x2 += velocidade2; //Código reponsavél por fazer o inimigo 2 andar, pegando a sua posição x e somando com o valor da velocidade
