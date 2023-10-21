@@ -305,6 +305,92 @@ nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esse metódo e um pouco ma
 	ctx.clip();
  ### Resultado
  ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/15e56bb7-a52b-4b85-b7a7-c6b291a6ec42)
+ ## Diagrama de Classe e Documentação
+ ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/0ec5cc47-86d1-4573-978a-3f281e546a16)
+ ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/52444400-c0b7-4114-9334-7bb66e60ccc9)<br>
+ > ❗ **Adendo:** A classe "inimigo" agora possui um novo atributo: A direção. Ela e do tipo inteiro para indicar as oito direções que ela consegue ir (1.Sul, 2.Norte, 3.Sudoeste e assim por diante). A Classe "Jogo" tem um novo metódo: Recorte de fundo. Ela e a responsavel por fazer um corte em formato de circulo e esconder os inimigos.
+## Classes dentro do Javascript (Em arquivos separados)
+
+		class Jogo {
+		 constructor() {
+   		 this.obstaculo = 0;
+			 }
+
+	 	mostrarPontos() {
+	    	console.log(`Pontos: ${this.obstaculo}`);
+	 	}
+	
+		 tempo() {
+	   	 console.log('Tempo: 100 segundos');
+		 }
+	
+		 gerarObst() {
+	   	 const min = 1;
+	  	  const max = 5;
+	   	 this.obstaculo = Math.floor(Math.random() * (max - min + 1)) + min;
+	 	}
+	
+		 recortarDeFundo() {}
+		}
+		let jogo = new Jogo();
+		jogo.tempo();
+		jogo.gerarObst();
+		jogo.mostrarPontos();
+		jogo.recortarDeFundo();
+  
+		class Jogador {
+	 constructor() {
+	    this.pontuacao = 0;
+	    this.vida = 3;
+	 }
+	
+	 movimentar(direcao) {
+	    console.log(`Movendo para ${direcao}`);
+	 }
+	
+	 gerenciarVida(dano) {
+	    this.vida -= dano;
+	    if (this.vida <= 0) {
+	      console.log("Jogador morreu!");
+	    } else {
+	      console.log(`Vida restante: ${this.vida}`);
+	    }
+	 }
+	}
+	
+	const jogador1 = new Jogador();
+	jogador1.movimentar("Direita");
+	jogador1.gerenciarVida(20);
+	jogador1.gerenciarVida(20);
+	jogador1.gerenciarVida(60);
+
+	class Inimigo {
+	    constructor(tamanho, velocidade, direcao) {
+	        this.tamanho = tamanho;
+	        this.velocidade = velocidade;
+	        this.direcao = direcao;
+	    }
+	
+	    aumentarVelo() {
+	        this.velocidade++;
+	    }
+	
+	    movimento() {
+	        console.log(`Inimigo movendo-se na direção ${this.direcao} com velocidade ${this.velocidade}`);
+	    }
+	
+	    atacar() {
+	        console.log("Inimigo atacando!");
+	    }
+	}
+	
+	const inimigo1 = new Inimigo(5, 2, "Direita");
+	inimigo1.aumentarVelo();
+	inimigo1.movimento();
+	inimigo1.atacar();
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;É notavel que não estamos utilizando certas coisas da Classe na cena, e isso tem motivos. Estamos utilizando essa classe somente como base para a cena do Canvas, ou seja, utilizamos somente o conceito do jogo para demonstrar as funções do Canvas. Isso equivale tanto para os diagramas de classes, quanto para as classes dentro do Javascript.
+	  		
 
  ## Referências
  https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing<br>
