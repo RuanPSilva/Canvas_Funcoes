@@ -1,0 +1,30 @@
+class Jogo {
+ constructor() {
+    this.obstaculo = 0;
+ }
+
+ mostrarPontos() {
+    console.log(`Pontos: ${this.obstaculo}`);
+ }
+
+ tempo() {
+    console.log('Tempo: 100 segundos');
+ }
+
+ gerarObst() {
+    const min = 1;
+    const max = 5;
+    this.obstaculo = Math.floor(Math.random() * (max - min + 1)) + min;
+ }
+
+ recortarDeFundo() {
+    // Aqui você pode adicionar o código para recortar o obstáculo do fundo.
+    // Exemplo: let fundo = new Image(); fundo.src = 'imagem_do_fundo.jpg';
+ }
+}
+
+let jogo = new Jogo();
+jogo.tempo();
+jogo.gerarObst();
+jogo.mostrarPontos();
+jogo.recortarDeFundo();
