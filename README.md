@@ -7,20 +7,8 @@ Autores:Kauan Jesus e Ruan Pablo
 
 ## Começo do desenvolvimento
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Começamos criando as pastas (Css,Html,img e etc) basicas e linkando o GitHub com o computador. Comecei a cena utilizando um jogo bem simples, onde há 3 inimigos e 1 personagem, e voçe tem que desviar dos inimigos.  Utilizando a ideia deste jogo, estaremos implantando os topícos que foi monstrado acima junto com sua explicação.<br>
-### Comandos do Git utilizados<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/4194e9cc-da18-431d-836a-290d6f578bdc)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/a8ca5e4e-355d-407f-9bfe-bc1050efe41e)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/d4ba7f39-4f38-408a-994f-739cf4ae2fde)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/100269c2-6805-465a-b985-b475fd455a6b)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/4a6a81c0-b763-4f49-9ee2-df2ef1126678)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/e44105ae-b91e-4641-b756-f47cd78200d0)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/84045ed3-c850-43be-8495-ffaf3c3c1f2a)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/e636881f-0eb3-4ba2-9796-3fd76ddb353d)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/548d3f42-eee8-4c1e-87e4-5f6746c44706)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/99f64183-6875-44e8-9651-c9bf2bc9f626)<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/39314702-ef4b-46a9-93ad-10f437ea4a9f)<br
 ## Cenário inicial
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/278bb76a-9236-485d-84fd-da2e71f0190d)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/4ab8c92c-f89d-4429-8d7d-ac3a18b37303)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqui temos um cenário bem simples, vale lembrar que este projeto serve mais para mostrar as funçoes do Canvas, então não há necessidade de fazer algo muito complexo. Utilizamos os desenhos simples do Canvas:Retângulos;Arcos e Linhas e pintamos o fundo de azul escuro com comandos no css. Utilizando os seus respectivos comandos:
 
      //Circulo
@@ -235,7 +223,8 @@ Autores:Kauan Jesus e Ruan Pablo
  ## Translação 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O metódo "translate()" e usado para mover o canvas e sua Grid para um ponto diferente do grid.
   - Sintaxe:translate(x,y). X indica a distancia horizontal a ser movida e Y a distancia vertical.<br>
-  ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/fad73106-1760-4ace-86bc-eb5663ed6940)<br>
+
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/4c6ef636-777c-4038-8624-062747454173)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A imagem acima representa de forma grafica como esse comando funciona, e como ele mexe o canvas pelo Grid. É o codígo abaixo mostra o metódo "translate()" sendo usado no nosso codígo. Ele basicamente e responsavel por mover todos os personagens da cena em seus respectivos eixos.
 
 		function inimigo1(){ //Criando uma function para o inimigo 1
@@ -249,11 +238,12 @@ Autores:Kauan Jesus e Ruan Pablo
 
 		function barco()
   		ctx.translate(0,yBarco) // Código de tranlação responsável por mover todos os atributos que formam o barco (apenas no eixo y pois o barco só vai para cima e 		para baixo)
-
+### Resultado 
+https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/c02ab98f-5427-4873-8770-fcae7a05cd68
 ## Rotação
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O método "Rotate()" e utilizado para rotacionar o canvas em torno da propria origem.<br>
 - Sintaxe: rotate(angulo). Este metodo rotaciona no sentido horario, com base em radianos. O ponto central da rotação e sempre o ponto de origem do canvas.<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/0ea046aa-298f-4d49-af32-7108f2a4d0a6)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/206cacfe-669f-4d8a-bee0-2316cbad5ab7)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A imagem acima mostra como funciona de forma grafíca, e o codígo abaixo mostra como funciona dentro do nosso codígo. Basicamente, ele esta fazendo o inimigo 1 do jogo (A primeira bolinha roxa de cima pra baixo) ir em linha reta para baixo, se nao fosse pelo metodo "Rotate()" o inimigo 1 estaria indo reto para a direita.
 
 		function inimigo1(){ //Criando uma function para o inimigo 1
@@ -265,9 +255,7 @@ Autores:Kauan Jesus e Ruan Pablo
 		ctx.fill();//Corpo
   		/.../
 ### Resultado
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/7a4cfe50-050b-4846-9603-5a98fc2efdfb)
-
-
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/7bf595c8-75d7-48b2-a4fa-748795717ce9)<br>
 > 🗒️ *Nota:* Reduzimos o tamanho da função inteira para economizarmos linha neste readme, ja que ja mostramos essa função varias vezes. Os codígos repetidos a partir daqui sera limitados pelo "/.../" caso eles ja tenham aparecido, mostrando somente a parte onde o metódo principal esta sendo utilizado.<br>
 ## Escala ou Escalonamento
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O metódo de Escalonamento as unidades do grid, ou seja, ele serve para diminuir ou aumentar os objetos do Canvas.<br>
@@ -282,11 +270,11 @@ Autores:Kauan Jesus e Ruan Pablo
 		ctx.fill();//Corpo
   		/.../
 ### Resultado
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/6619b5bf-e37d-402b-91d9-452d274d6454)
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/4b094454-7c55-4433-9949-36b2bed69888)
 ## Transformação
 nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esse metódo e um pouco mais complicado, ele permite modificacoes direta nas matriz de transformações<br>
 - Sintaxe:transform (m11,m12,m21,m22,dx,dy). Esse metódo multiplica  a matriz de transformação pela matriz descrita por:<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/fd8715f3-16f9-4d0b-bd6a-f0557101cc7b)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/35deb496-6ed5-4eef-baae-3ca3f6cb5222)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Se você tiver estudado matrizes na escola, fica bem mais facil de entender essa imagem. Vale lembrar que o "x" e o "y" na segunda matriz e o "dx" e o "dy" na sintaxe acima. Com esse método você consegue fazer todas as outras coisas que os outros métodos fazem, além de conseguir mover e distorcer os objetos também. Porém, esse metódo também tem outra sintaxe acompanhada com ele, que é o:
 - Sintaxe: setTransform(m11, m12, m21, m22, dx, dy). Este método reseta a matriz atual para a matriz indentidade, e então chama o método "Transform()" com os mesmos argumentos, desfazendo a transformação atual e configurando a nova transformação especifíca, tudo em 1 so comando. Neste codígo estamos utilizando este método para deixar os métodos "translate()" afetando somente seu respectivo personagem, como no codígo abaixo:
 
@@ -295,7 +283,7 @@ nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esse metódo e um pouco ma
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O resultado aqui seria o mesmo que no da translação, ja que ambos estão trabalhando para fazerem a mesma coisa.
 ## Clipping Path ( Caminhos de Recorte)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Este método recorta partes que você acha indesejavel no Canvas, na forma que você quiser, como se fosse a ferramenta de tesoura nos editores de imagens. A imagem abaixo mostra isso, o formato da estrela e o lugar onde esta cortado e tudo que estiver do lado de fora não ira aparecer no Canvas.<br>
-![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/9b420a76-91da-45e9-afc2-3b0992328fe0)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/dd78680a-4f90-47a5-9a05-bf7c2ec0c878)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No codígo abaixo, eu utilizei a função de Recorte para "Esconder" os inimigos no meio do caminho, utilizando um circulo como forma de recorte.
 
 	function desenharCorte() {
@@ -304,10 +292,10 @@ nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Esse metódo e um pouco ma
 	ctx.arc(230,280,310,0,Math.PI*2)
 	ctx.clip();
  ### Resultado
- ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/15e56bb7-a52b-4b85-b7a7-c6b291a6ec42)
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/7db5f8be-bbf5-428b-8700-719da8f4e45e)
  ## Diagrama de Classe e Documentação
- ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/0ec5cc47-86d1-4573-978a-3f281e546a16)
- ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/52444400-c0b7-4114-9334-7bb66e60ccc9)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/1e853842-0e28-4f16-a6d2-1a1fcd42078c)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/a4f91710-23de-4955-ad35-add13c4111f7)<br>
  > ❗ **Adendo:** A classe "inimigo" agora possui um novo atributo: A direção. Ela e do tipo inteiro para indicar as oito direções que ela consegue ir (1.Sul, 2.Norte, 3.Sudoeste e assim por diante). A Classe "Jogo" tem um novo metódo: Recorte de fundo. Ela e a responsavel por fazer um corte em formato de circulo e esconder os inimigos.
 ## Classes dentro do Javascript (Em arquivos separados)
 
