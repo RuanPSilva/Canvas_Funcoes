@@ -6,7 +6,19 @@
 Autores:Kauan Jesus e Ruan Pablo
 
 ## Começo do desenvolvimento
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Começamos criando as pastas (Css,Html,img e etc) basicas e linkando o GitHub com o computador. Comecei a cena utilizando um jogo bem simples, onde há 3 inimigos e 1 personagem, e voçe tem que desviar dos inimigos.  Utilizando a ideia deste jogo, estaremos implantando os topícos que foi monstrado acima junto com sua explicação.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Começamos criando as pastas (Css,Html,img e etc) basicas e linkando o GitHub com o computador. Comecei a cena utilizando um jogo bem simples, onde há 3 inimigos e 1 personagem, e voçe tem que desviar dos inimigos.  Utilizando a ideia deste jogo, estaremos implantando os topícos que foi monstrado acima junto com sua explicação.
+### Codígos do Git utilizados
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/0c2939b1-f8d0-48f3-9ccc-30f74dee6d6f)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/e31ba913-a4c3-4f05-bee7-7b384614cb09)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/2db41b5a-6026-4a17-8436-82dd7b4e78db)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/9eaf43bf-b8bd-4fe1-a6bf-744bf766f18f)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/e3a4cbf0-7ba3-4d56-b8cd-a05a50d8b454)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/2e5c7541-9aaa-4da4-8c61-bb108aec7baa)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/cdb77789-3aa8-4742-ab4b-f93a9dded4f7)<br>
+![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/128431007/81a594e7-559e-4445-99f8-45dce48b430e)<br>
+
+
+
 ## Cenário inicial
 ![image](https://github.com/RuanPSilva/Canvas_Funcoes/assets/127852225/4ab8c92c-f89d-4429-8d7d-ac3a18b37303)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqui temos um cenário bem simples, vale lembrar que este projeto serve mais para mostrar as funçoes do Canvas, então não há necessidade de fazer algo muito complexo. Utilizamos os desenhos simples do Canvas:Retângulos;Arcos e Linhas e pintamos o fundo de azul escuro com comandos no css. Utilizando os seus respectivos comandos:
