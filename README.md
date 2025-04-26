@@ -1,10 +1,10 @@
-Canvas_Funções
-Olá! Neste trabalho, desenvolvemos uma cena no Canvas para explicar e demonstrar o funcionamento de: Translação, Rotação, Escala, Transform e Clipping Path, tudo utilizando JavaScript. Além disso, também implementamos movimentação e colisão no projeto.
+# Canvas_Funções
+Neste trabalho, desenvolvemos uma cena no Canvas para explicar e demonstrar o funcionamento de: Translação, Rotação, Escala, Transform e Clipping Path, tudo utilizando JavaScript. Além disso, também implementamos movimentação e colisão no projeto.
 
 Neste projeto, também incluímos algo diferente: mostramos todos os comandos do Git Bash utilizados para enviar os arquivos do navegador para o computador, junto com a explicação de alguns comandos adicionais.
 
 <br>
-Autores: Kauan Jesus e Ruan Pablo
+
 
 Início do Desenvolvimento
 Começamos criando as pastas básicas (CSS, HTML, img, etc.) e vinculando o repositório ao GitHub. A estrutura inicial da cena foi baseada em um jogo simples, onde há três inimigos e um personagem, e o objetivo é desviar dos inimigos. A partir dessa base, integramos os tópicos listados acima, com suas respectivas explicações.
@@ -19,22 +19,22 @@ Códigos Git Utilizados
 
 
 
-Cenário Inicial
+## Cenário Inicial
 
 
 O cenário é simples, pois o objetivo principal é demonstrar as funções do Canvas, e não a complexidade gráfica. Foram utilizados os seguintes elementos:
 
-Retângulos
+- Retângulos
 
-Arcos
+- Arcos
 
-Linhas
+- Linhas
 
-Fundo com cor via CSS
+- Fundo com cor via CSS
 
-Trechos de Código:
-javascript
-Copiar código
+## Trechos de Código:
+
+```javascript
 // Círculo
 ctx.beginPath();
 ctx.arc(100, 70, 60, 0, Math.PI * 2);
@@ -56,8 +56,7 @@ ctx.lineTo(110, 100);
 ctx.lineTo(130, 80);
 ctx.lineTo(130, 100);
 ctx.stroke();
-css
-Copiar código
+
 body {
   overflow: hidden; /* Esconde a barra de rolagem */
 }
@@ -65,14 +64,14 @@ body {
 #canvas {
   background-color: blue; /* Fundo azul escuro */
 }
-⚠️ Atenção: Os códigos acima foram retirados do código principal. Cuidado ao copiá-los diretamente.
 
-Movimentação e Colisão
+```
+
+## Movimentação e Colisão
 Para movimentar os elementos, criamos funções específicas para cada personagem, utilizando variáveis para controlar suas posições e velocidades.
 
-Exemplo de movimentação (Barco):
-javascript
-Copiar código
+### Exemplo de movimentação (Barco):
+```javascipt
 var yBarco = 1;
 var velocidadeBarco = 10;
 
@@ -91,11 +90,12 @@ function barco() {
   ctx.fill();
   ctx.setTransform(1, 0, 0, 1, 0, 0);
 }
-Inimigos:
+```
+
+### Inimigos:
 Cada inimigo possui sua própria função (inimigo1, inimigo2, inimigo3), controlando seus movimentos no eixo X.
 
-javascript
-Copiar código
+```javascript
 var x = 1; 
 var velocidade = 6;
 
@@ -107,13 +107,13 @@ function inimigo1() {
   ctx.fill();
   ctx.setTransform(1, 0, 0, 1, 0, 0);
 }
+```
 (O mesmo padrão é aplicado para inimigo2 e inimigo3, com suas devidas posições e velocidades.)
 
-Animação:
+### Animação:
 A função animar() é responsável por animar todos os objetos na tela:
 
-javascript
-Copiar código
+```javascript
 function animar() {
   ctx.clearRect(0, 0, 1400, 600);
   inimigo3();
@@ -125,27 +125,29 @@ function animar() {
   x2 += velocidade2;
   x += velocidade;
 }
-Colisão:
+```
+### Colisão:
 As colisões são tratadas de forma simples utilizando condições:
 
-javascript
-Copiar código
+```javascipt
 if (x3 > 1420) {
   x3 = -100; // Volta ao início da tela
 }
+```
+
 O barco é impedido de sair da área do Canvas, e os inimigos "resetam" quando saem da tela.
 
 Resumo
 Este projeto mostra, na prática, como manipular elementos no Canvas com:
 
-Translação
+- Translação
 
-Movimentação
+- Movimentação
 
-Colisão
+- Colisão
 
-Criação de formas básicas
+- Criação de formas básicas
 
-Manipulação de transformações
+- Manipulação de transformações
 
 Além de apresentar, também, o fluxo de trabalho utilizando o Git Bash para versionamento dos arquivos.
